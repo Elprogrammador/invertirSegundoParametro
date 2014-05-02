@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Inversión de Segundo Parámetro Ingresado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><h3>Ingrese cualquier tipo de Datos en los dos cuadros de Texto.</h3></div>
+        <input type="text" id="txtValor1" name="cadena"><br><br>
+        <input type="text" id="txtValor2" name="cadena"><br><br>
+        <input type="button" id="Boton" value="Presionar para ejecutar" onclick="invertirSegundo()"/> <br><br>
+        <a href="index.html"><h2>Clic Aquí para Limpiar o Borrar Campos.</h2></a><br>        
+    </body>
+</html>
+<script>
+function invertirSegundo(cadena) {
+    var cadena1=document.getElementById("txtValor1").value;
+    var cadena2=document.getElementById("txtValor2").value;
+    var x = cadena2.length;
+    var cadenaInv = "";
+    while (x>=0) {
+    cadenaInv = cadenaInv + cadena2.charAt(x);
+    x--; 
+    }
+    cadena1.indexOf(cadena2) != -1 ? true : false
+    {
+       cadena1 = cadena1.replace(cadena2, cadenaInv);    
+    }
+    alert(cadena1 + ' ' + cadenaInv);
+}
+</script>
